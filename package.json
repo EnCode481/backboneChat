@@ -1,0 +1,16 @@
+{
+  "name": "ChatSocketIO",
+  "version": "0.0.0",
+  "description": "socketIO and backbone.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.13.3",
+    "socket.io": "~1.3.6"
+  }
+}

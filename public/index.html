@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="dependencies/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="dependencies/spectrum/spectrum.css">
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">Chat</a>
+		    </div>
+		    <div>
+		      <ul class="nav navbar-nav">
+		        <li class="active"><a href="#/settings">Settings</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+				  
+		  <div class="container">
+		    <div id="here"></div>
+		  </div>
+		
+		<div class="container">
+			<div id="test"></div>
+		</div>
+		
+		<script type="text/template" id="main">
+		  <div class="row">
+		    
+		    <div class="col-sm-12">
+		      <div class="row">
+		        <div class="col-sm-12">
+		            <div id="messages"></div>
+		        </div>
+		      </div>
+		      <div class="row">
+		        <div class="col-sm-8">
+		          <form class="send-form" action="" onsubmit="return false;">
+		            <input type="text" class="form-control" id="messageInput" autocomplete="off" placeholder="Enter a message ..."></input>
+		          </form>
+		        </div>
+		        <div class="col-sm-4">
+		          <button class="send-btn btn btn-block btn-success">OK</button>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  </script>
+		  
+		  <script type="text/template" id="messageTemplate">
+		  	<span class="sender"><%= sender %></span>:<span class="msg"><%= message %></span>
+		  </script>
+		  
+		  
+		<script type="text/template" id="settingsViewTemplate">
+		<button class="btn btn-danger edit-btn">edit</button>
+		<button class="btn btn-success confirm-btn" style="display:none">accept</button>
+		<button class="btn btn-warning cancel-btn" style="display:none">cancel</button>
+		  <div class="container">
+			  <table class="table">
+				  <thead>
+					  <tr>
+						  <th>Property</th>
+						  <th>Value</th>
+					  </tr>
+				  </thead>
+				  <tbody id='settingsList'>
+					<tr>
+						<td><span class="stgProperty">NickName</span></td>
+						<td><span class="nickNameStg"><%= nickName %></span></td>	
+					</tr>	
+					<tr>
+						<td><span class="stgProperty">Background color</span></td>
+						<td><span class="bgColorStg"><%= bgColor %></span></td>	
+					</tr>
+				  </tbody>			  
+		  </div>
+	    </script>
+		<script type="text/template" id="settingsTemplate">
+			<td><span class="stgProperty"><%= property %></span></td>
+			<td><span class="stgValue"><%= value %></span></td>
+		</script>
+		
+		<script src="dependencies/jquery/dist/jquery.js"></script>
+		<script src="dependencies/underscore/underscore.js"></script>
+		<script src="dependencies/backbone/backbone.js"></script>
+		<script src="http://localhost:3000/socket.io/socket.io.js"></script>
+		<script src="js/models.js"></script>
+		<script src="js/views.js"></script>
+		<script src="js/chatsocket.js"></script>
+		<script src="js/router.js"></script>
+		<script src="dependencies/spectrum/spectrum.js"></script>
+	</body>
+</html>
+
+

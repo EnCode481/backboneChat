@@ -1,0 +1,27 @@
+#app {
+  margin-top: 100px;
+}
+
+.sendform input { 
+  border: 0; 
+  height: 25px;
+}
+
+.messages { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  overflow: auto;
+}
+  
+.messages li { 
+  padding: 5px 10px;
+  min-height: 30px;
+}
+
+.sender {
+  margin: 0px 5px;
+}
+.msg{
+  margin-left:5px;
+}
